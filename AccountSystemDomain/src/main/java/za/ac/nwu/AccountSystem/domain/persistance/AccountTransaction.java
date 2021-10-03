@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
-@Table(name= "DEMO_ACCOUNT_TYPE",schema = "VITRSA_SANDBOX")
+@Table(name= "ACCOUNT_TRANSACTION",schema = "VITRSA_SANDBOX")
 public class AccountTransaction implements Serializable{
     private static final long serialVersionUID = -142829431701917576L;
 
@@ -30,7 +30,7 @@ public class AccountTransaction implements Serializable{
     @SequenceGenerator(name = "VIT_RSA_GENERIC_SEQ",sequenceName = "VITRSA_SANDBOX.VIT_RSA_GENERIC_SEQ",allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "VIT_RSA_GENERIC_SEQ")
 
-    @Column(name="TX_ID")
+    @Column(name="ACCOUNT_TRANSACTION_ID")
     public Long getTransactionId()
     {
         return transactionId;
@@ -48,7 +48,7 @@ public class AccountTransaction implements Serializable{
         return amount;
     }
 
-    @Column(name = "TX_DATE")
+    @Column(name = "TRANSACTION_DATE")
     public LocalDate getTransactionDate()
     {
         return transactionDate;

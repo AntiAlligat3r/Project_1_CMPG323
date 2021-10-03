@@ -1,4 +1,4 @@
-package za.ac.nwu.AccountSystem.web.sb.controller;
+/*package za.ac.nwu.AccountSystem.web.sb.controller;
 
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -103,4 +103,4 @@ public class DemoController {
     {
         throw new RuntimeException("Give");
     }
-}
+}*/
