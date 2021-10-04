@@ -7,7 +7,7 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table(name = "ACCOUNT_TYPE", schema = "VITRSA_SANDBOX")
+@Table(name = "ACCOUNT_TYPE")
 public class AccountType implements Serializable {
 
     private static final long serialVersionUID = -2282337104058330818L;
@@ -28,6 +28,12 @@ public class AccountType implements Serializable {
         this.accountTypeName = accountTypeName;
         this.creationDate = creationDate;
 
+    }
+
+    public AccountType(String mnemonic, String accountTypeName, LocalDate creationDate) {
+        this.mnemonic = mnemonic;
+        this.accountTypeName = accountTypeName;
+        this.creationDate = creationDate;
     }
 
     @Id

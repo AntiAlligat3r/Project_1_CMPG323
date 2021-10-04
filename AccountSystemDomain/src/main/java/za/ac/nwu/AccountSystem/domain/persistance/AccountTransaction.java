@@ -3,10 +3,9 @@ package za.ac.nwu.AccountSystem.domain.persistance;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Objects;
 
 @Entity
-@Table(name= "ACCOUNT_TRANSACTION",schema = "VITRSA_SANDBOX")
+@Table(name= "ACCOUNT_TRANSACTION")
 public class AccountTransaction implements Serializable{
     private static final long serialVersionUID = -142829431701917576L;
 

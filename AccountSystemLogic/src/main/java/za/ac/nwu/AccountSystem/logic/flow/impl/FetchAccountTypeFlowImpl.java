@@ -17,12 +17,11 @@ public class FetchAccountTypeFlowImpl implements FetchAccountTypeFlow
 {
     private final AccountTypeTranslator accountTypeTranslator;
 
+    @Autowired
     public FetchAccountTypeFlowImpl(AccountTypeTranslator accountTypeTranslator)
     {
         this.accountTypeTranslator = accountTypeTranslator;
     }
-
-    @Autowired
 
     @Override
     public List<AccountTypeDto> getAllAccountTypes() {

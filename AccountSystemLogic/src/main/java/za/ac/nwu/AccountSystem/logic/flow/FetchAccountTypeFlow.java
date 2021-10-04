@@ -1,8 +1,6 @@
 package za.ac.nwu.AccountSystem.logic.flow;
 
-
 import za.ac.nwu.AccountSystem.domain.dto.AccountTypeDto;
-
 import java.util.List;
 
 public interface FetchAccountTypeFlow {
