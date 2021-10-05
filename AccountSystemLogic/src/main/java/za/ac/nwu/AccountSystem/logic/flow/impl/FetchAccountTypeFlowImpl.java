@@ -29,4 +29,10 @@ public class FetchAccountTypeFlowImpl implements FetchAccountTypeFlow
         accountTypeDtos.add(new AccountTypeDto("Miles","miles", LocalDate.now()));
         return accountTypeDtos;
     }
+
+    /*@Override
+    public AccountTypeDto getAccountTypeByMnemonic(String mnemonic)
+    {
+        return accountTypeTranslator.getAccountTypeByMnemonicNativeQuery(mnemonic);
+    }*/
 }
