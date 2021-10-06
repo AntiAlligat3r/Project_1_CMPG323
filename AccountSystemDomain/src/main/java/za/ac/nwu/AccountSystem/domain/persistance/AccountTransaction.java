@@ -3,9 +3,10 @@ package za.ac.nwu.AccountSystem.domain.persistance;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Objects;
 
 @Entity
-@Table(name= "ACCOUNT_TRANSACTION")
+@Table(name= "ACCOUNT_TRANSACTION",schema = "DONOVAN")
 public class AccountTransaction implements Serializable{
     private static final long serialVersionUID = -142829431701917576L;
 
@@ -25,9 +26,10 @@ public class AccountTransaction implements Serializable{
         this.transactionDate = transactionDate;
     }
 
+
     @Id
-    @SequenceGenerator(name = "VIT_RSA_GENERIC_SEQ",sequenceName = "VITRSA_SANDBOX.VIT_RSA_GENERIC_SEQ",allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "VIT_RSA_GENERIC_SEQ")
+    @SequenceGenerator(name = "ACCOUNT_TRANSACTION_SEQ",sequenceName = "DONOVAN.ACCOUNT_TRANSACTION_SEQ",allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "ACCOUNT_TRANSACTION_SEQ")
 
     @Column(name="ACCOUNT_TRANSACTION_ID")
     public Long getTransactionId()
@@ -75,5 +77,35 @@ public class AccountTransaction implements Serializable{
         this.amount = amount;
     }
 
+    public void setAccountType(AccountType accountType) {
+        this.accountType = accountType;
+    }
 
+    public void setTransactionDate(LocalDate transactionDate) {
+        this.transactionDate = transactionDate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AccountTransaction that = (AccountTransaction) o;
+        return Objects.equals(transactionId, that.transactionId) && Objects.equals(memberId, that.memberId) && Objects.equals(amount, that.amount) && Objects.equals(accountType, that.accountType) && Objects.equals(transactionDate, that.transactionDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(transactionId, memberId, amount, accountType, transactionDate);
+    }
+
+    @Override
+    public String toString() {
+        return "AccountTransaction{" +
+                "transactionId=" + transactionId +
+                ", memberId=" + memberId +
+                ", amount=" + amount +
+                ", accountType=" + accountType +
+                ", transactionDate=" + transactionDate +
+                '}';
+    }
 }

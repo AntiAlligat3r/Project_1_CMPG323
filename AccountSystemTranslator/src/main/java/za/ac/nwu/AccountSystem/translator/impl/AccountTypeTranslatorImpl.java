@@ -10,7 +10,7 @@ import za.ac.nwu.AccountSystem.translator.AccountTypeTranslator;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+//@Component("accountTypeRepository")
 public class AccountTypeTranslatorImpl implements AccountTypeTranslator
 {
     private final AccountTypeRepository accountTypeRepository;

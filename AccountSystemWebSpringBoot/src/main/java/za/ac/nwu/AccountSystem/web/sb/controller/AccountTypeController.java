@@ -11,8 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import za.ac.nwu.AccountSystem.domain.dto.AccountTypeDto;
 import za.ac.nwu.AccountSystem.domain.service.GeneralResponse;
-import za.ac.nwu.AccountSystem.logic.flow.FetchAccountTypeFlow;
-import za.ac.nwu.AccountSystem.logic.flow.CreateAccountTypeFlow;
+import za.ac.nwu.AccountSystem.logic.flow.inter.type.FetchAccountTypeFlow;
+import za.ac.nwu.AccountSystem.logic.flow.inter.type.CreateAccountTypeFlow;
 
 import java.util.List;
 
@@ -24,13 +24,11 @@ public class AccountTypeController {
     private final CreateAccountTypeFlow createAccountTypeFlow;
 
     @Autowired
-    public AccountTypeController(FetchAccountTypeFlow fetchAccountTypeFlow, @Qualifier("createAccountTypeFlowName") CreateAccountTypeFlow createAccountTypeFlow)
+    public AccountTypeController(@Qualifier("fetchAccountTypeFlowName") FetchAccountTypeFlow fetchAccountTypeFlow, @Qualifier("createAccountTypeFlowName") CreateAccountTypeFlow createAccountTypeFlow)
     {
         this.fetchAccountTypeFlow = fetchAccountTypeFlow;
         this.createAccountTypeFlow = createAccountTypeFlow;
     }
-
-   // @Autowired
 
     @GetMapping("/all")
     @ApiOperation(value = "Gets all the configured account types",notes = "Returns a list of account types")
