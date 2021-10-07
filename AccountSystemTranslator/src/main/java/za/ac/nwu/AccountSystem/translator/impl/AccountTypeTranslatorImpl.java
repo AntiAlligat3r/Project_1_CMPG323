@@ -50,7 +50,7 @@ public class AccountTypeTranslatorImpl implements AccountTypeTranslator
         }
     }
 
-    /*@Override
+    @Override
     public AccountTypeDto getAccountTypeByMnemonicNativeQuery(String mnemonic)
     {
         try
@@ -86,5 +86,5 @@ public class AccountTypeTranslatorImpl implements AccountTypeTranslator
         {
             throw new RuntimeException("Unable to read from the DB",e);
         }
-    }*/
+    }
 }
