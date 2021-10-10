@@ -1,5 +1,6 @@
 za\ac\nwu\AccountSystem\domain\service\GeneralResponse.class
 za\ac\nwu\AccountSystem\domain\persistance\AccountType.class
 za\ac\nwu\AccountSystem\domain\service\Pong.class
+za\ac\nwu\AccountSystem\domain\dto\AccountTransactionDto.class
 za\ac\nwu\AccountSystem\domain\dto\AccountTypeDto.class
 za\ac\nwu\AccountSystem\domain\persistance\AccountTransaction.class

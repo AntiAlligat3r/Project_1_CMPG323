@@ -26,6 +26,11 @@ public class AccountTransaction implements Serializable{
         this.transactionDate = transactionDate;
     }
 
+    public AccountTransaction( AccountType accountType,Long amount, LocalDate transactionDate) {
+        this.accountType = accountType;
+        this.amount = amount;
+        this.transactionDate = transactionDate;
+    }
 
     @Id
     @SequenceGenerator(name = "ACCOUNT_TRANSACTION_SEQ",sequenceName = "DONOVAN.ACCOUNT_TRANSACTION_SEQ",allocationSize = 1)
@@ -56,7 +61,7 @@ public class AccountTransaction implements Serializable{
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ACCOUNT_TYPE_ID")
+    //@JoinColumn(name = "ACCOUNT_TYPE_ID")
     public AccountType getAccountType()
     {
         return accountType;

@@ -36,6 +36,11 @@ public class AccountTransactionDto implements Serializable
         this.setTransactionDate(accountTransaction.getTransactionDate());
     }
 
+    @JsonIgnore
+    public AccountTransaction getAccountTransaction()
+    {
+        return new AccountTransaction(getAccountType(),getAmount(),getTransactionDate());
+    }
     @ApiModelProperty
             (
                     position = 1,

@@ -10,7 +10,7 @@ import za.ac.nwu.AccountSystem.translator.AccountTypeTranslator;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Component("accountTypeRepository")
+@Component
 public class AccountTypeTranslatorImpl implements AccountTypeTranslator
 {
     private final AccountTypeRepository accountTypeRepository;
@@ -50,7 +50,7 @@ public class AccountTypeTranslatorImpl implements AccountTypeTranslator
         }
     }
 
-    @Override
+    /*@Override
     public AccountTypeDto getAccountTypeByMnemonicNativeQuery(String mnemonic)
     {
         try
@@ -77,7 +77,7 @@ public class AccountTypeTranslatorImpl implements AccountTypeTranslator
     }
 
     @Override
-    public AccountTypeDto getAccountTypeByMnemonic(String mnemonic)
+    public AccountTypeDto getAccountTypeDtoByMnemonic(String mnemonic)
     {
         try
         {
@@ -86,5 +86,5 @@ public class AccountTypeTranslatorImpl implements AccountTypeTranslator
         {
             throw new RuntimeException("Unable to read from the DB",e);
         }
-    }
+    }*/
 }

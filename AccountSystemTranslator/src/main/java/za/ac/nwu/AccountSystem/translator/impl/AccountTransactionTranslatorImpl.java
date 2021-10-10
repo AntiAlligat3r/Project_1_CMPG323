@@ -7,7 +7,7 @@ import za.ac.nwu.AccountSystem.domain.persistance.AccountTransaction;
 import za.ac.nwu.AccountSystem.repo.persistence.AccountTransactionRepository;
 import za.ac.nwu.AccountSystem.translator.AccountTransactionTranslator;
 
-//@Component("accountTransactionRepository")
+@Component
 public class AccountTransactionTranslatorImpl implements AccountTransactionTranslator {
 
     private final AccountTransactionRepository accountTransactionRepository;
@@ -21,7 +21,7 @@ public class AccountTransactionTranslatorImpl implements AccountTransactionTrans
     public AccountTransactionDto createTransaction(AccountTransactionDto accountTransactionDto) {
         try
         {
-            AccountTransaction accountTransaction = accountTransactionRepository.save(accountTransactionDto.getAmount().toString());
+            AccountTransaction accountTransaction = accountTransactionRepository.save(accountTransactionDto.getAccountTransaction());
             return new AccountTransactionDto(accountTransaction);
         }
         catch (Exception e)

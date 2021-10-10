@@ -24,7 +24,7 @@ public class AccountTypeController {
     private final CreateAccountTypeFlow createAccountTypeFlow;
 
     @Autowired
-    public AccountTypeController(@Qualifier("fetchAccountTypeFlowName") FetchAccountTypeFlow fetchAccountTypeFlow, @Qualifier("createAccountTypeFlowName") CreateAccountTypeFlow createAccountTypeFlow)
+    public AccountTypeController(@Qualifier(value ="fetchAccountTypeFlowName") FetchAccountTypeFlow fetchAccountTypeFlow, @Qualifier(value ="createAccountTypeFlowName") CreateAccountTypeFlow createAccountTypeFlow)
     {
         this.fetchAccountTypeFlow = fetchAccountTypeFlow;
         this.createAccountTypeFlow = createAccountTypeFlow;

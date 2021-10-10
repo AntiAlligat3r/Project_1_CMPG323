@@ -2,6 +2,7 @@ package za.ac.nwu.AccountSystem.logic.flow.impl.type;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import za.ac.nwu.AccountSystem.domain.dto.AccountTypeDto;
 import za.ac.nwu.AccountSystem.logic.flow.inter.type.FetchAccountTypeFlow;
